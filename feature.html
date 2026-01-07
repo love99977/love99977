@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>湖南景区介绍 - 特色内容</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./fonts/font.css">
+</head>
+<body>
+  <header class="header">
+    <div class="date" id="featureDate"></div>
+    <div class="logo">
+      <img src="./images/logo.png" alt="湖南景区介绍网logo">
+    </div>
+    <nav class="nav">
+      <a href="register.html">注册</a>
+      <a href="feature.html">景区特色内容</a>
+      <a href="theme.html">景区主题介绍</a>
+      <a href="home.html">首页</a>
+    </nav>
+  </header>
+
+  <div class="container" style="margin-top: 2rem;">
+    <div class="content-wrap" style="display: flex; gap: 2rem;">
+      <div class="sidebar" style="width: 25%;">
+        <h3 style="color: #2d3748; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #4299e1;">特色景区</h3>
+        <a href="javascript:showScenic('zhangjiajie')" class="sidebar-link">张家界·奇峰异石</a>
+        <a href="javascript:showScenic('fenghuang')" class="sidebar-link">凤凰古城·民俗风情</a>
+        <a href="javascript:showScenic('media')" class="sidebar-link">景区实拍音视频</a>
+      </div>
+
+      <div class="content-area" style="width: 75%;" id="scenicContent">
+        <div id="zhangjiajieContent">
+          <h2 style="color: #4299e1; margin-bottom: 1.5rem;">张家界·奇峰异石</h2>
+          <img src="./images/1.jpg" alt="张家界袁家界" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem;">
+          <p style="line-height: 1.8; color: #4a5568; margin-bottom: 1rem;">
+            张家界的石英砂岩峰林形成于约3.8亿年前，是世界上独一无二的地貌类型，被命名为“张家界地貌”。
+            袁家界的“阿凡达悬浮山”原型——哈利路亚山（乾坤柱）更是享誉全球，吸引了无数游客前来打卡。
+          </p>
+          <p style="line-height: 1.8; color: #4a5568;">
+            除了自然景观，张家界的土家族摆手舞、哭嫁习俗等民俗文化也独具魅力，每年的“张家界国际森林保护节”更是展现了当地的生态与文化融合。
+          </p>
+        </div>
+
+        <!-- 凤凰古城内容（默认隐藏） -->
+        <div id="fenghuangContent" style="display: none;">
+          <h2 style="color: #4299e1; margin-bottom: 1.5rem;">凤凰古城·民俗风情</h2>
+          <img src="./images/2.jpg" alt="凤凰古城沱江" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem;">
+          <p style="line-height: 1.8; color: #4a5568; margin-bottom: 1rem;">
+            凤凰古城始建于清康熙年间，至今保留着完整的明清古建筑群。沱江泛舟是必体验的项目，船工的山歌回荡在江面，
+            岸边的吊脚楼、虹桥、万名塔构成了一幅绝美的水乡画卷。
+          </p>
+          <p style="line-height: 1.8; color: #4a5568;">
+            苗族银饰、蜡染、姜糖制作等非遗技艺，以及四月八、赶秋节等民俗节日，让凤凰古城成为体验湘西文化的最佳目的地。
+          </p>
+        </div>
+
+
+        <div id="mediaContent" style="display: none;">
+        <h2 style="color: #4299e1; margin-bottom: 1.5rem;">湖南景区实拍音视频</h2>
+
+        <video id="scenicVideo" width="100%" height="auto" style="border-radius: 8px;">
+          <source src="./media/video.mp4" type="video/mp4">
+          您的浏览器不支持HTML5视频播放
+        </video>
+
+        <div style="margin-top: 1rem; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; padding: 12px 16px; background: #f8fafc; border-radius: 8px;">
+          <button onclick="playVideo()" style="padding: 8px 16px; border: none; border-radius: 6px; background: #4299e1; color: #fff; cursor: pointer; font-size: 14px; transition: all 0.2s ease;">播放</button>
+          <button onclick="pauseVideo()" style="padding: 8px 16px; border: none; border-radius: 6px; background: #4299e1; color: #fff; cursor: pointer; font-size: 14px; transition: all 0.2s ease;">暂停</button>
+
+          <div style="display: flex; align-items: center; gap: 6px; color: #2d3748;">
+            <label style="font-size: 14px;">音量：</label>
+            <input type="range" oninput="setVolume(this.value)" min="0" max="1" step="0.1" value="0.8" style="width: 80px; accent-color: #4299e1; cursor: pointer;">
+          </div>
+
+          <div style="flex: 1; min-width: 200px; display: flex; align-items: center; gap: 6px; color: #2d3748;">
+            <label style="font-size: 14px;">进度：</label>
+            <input type="range" id="progress" min="0" max="100" step="1" value="0" oninput="setProgress(this.value)" style="width: 100%; accent-color: #4299e1; cursor: pointer;">
+          </div>
+
+          <button onclick="skip(10)" style="padding: 8px 16px; border: none; border-radius: 6px; background: #4299e1; color: #fff; cursor: pointer; font-size: 14px; transition: all 0.2s ease;">快进10秒</button>
+          <button onclick="skip(-10)" style="padding: 8px 16px; border: none; border-radius: 6px; background: #4299e1; color: #fff; cursor: pointer; font-size: 14px; transition: all 0.2s ease;">快退10秒</button>
+        </div>
+      </div>
+
+
+<script src="./js/mediaCtrl.js"></script>
+
+
+        <script>
+        const video = document.getElementById('scenicVideo');
+
+        function playVideo() {
+          video.play();
+          setInterval(() => {
+            document.getElementById('progress').value = (video.currentTime / video.duration) * 100;
+          }, 500);
+        }
+
+        function pauseVideo() {
+          video.pause();
+        }
+
+        function setVolume(val) {
+          video.volume = val;
+        }
+
+        function setProgress(val) {
+          video.currentTime = (val / 100) * video.duration;
+        }
+
+        function skip(seconds) {
+          video.currentTime += seconds;
+          if (video.currentTime < 0) video.currentTime = 0;
+          if (video.currentTime > video.duration) video.currentTime = video.duration;
+        }
+
+        document.querySelectorAll('button[onclick]').forEach(btn => {
+          btn.onmouseover = function() {
+            this.style.background = '#2563eb';
+            this.style.transform = 'translateY(-1px)';
+          }
+          btn.onmouseout = function() {
+            this.style.background = '#4299e1';
+            this.style.transform = 'translateY(0)';
+          }
+        });
+        </script>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const date = new Date();
+    const formattedDate = `${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日 ${date.getHours()}:${date.getMinutes()}`;
+    document.getElementById('featureDate').innerText = formattedDate;
+    function showScenic(type) {
+      document.getElementById('zhangjiajieContent').style.display = 'none';
+      document.getElementById('fenghuangContent').style.display = 'none';
+      document.getElementById('mediaContent').style.display = 'none';
+      document.getElementById(`${type}Content`).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

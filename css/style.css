@@ -1,0 +1,192 @@
+/* 全局重置 & 公共样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'HunanScenicFont', sans-serif; /* 应用自定义字体 */
+}
+
+/* 响应式布局容器 */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* 顶部导航栏（所有页面通用） */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #e8f4f8;
+  border-bottom: 2px solid #4299e1;
+  flex-wrap: wrap; /* 响应式折行 */
+}
+
+.header .date {
+  color: #2d3748;
+  font-size: 0.9rem;
+}
+
+.header .logo img {
+  width: 80px;
+  height: auto;
+}
+
+.header .nav a {
+  margin: 0 0.8rem;
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease; /* 过渡动画 */
+}
+
+.header .nav a:hover {
+  background-color: #4299e1;
+  color: white;
+}
+
+/* 圆角按钮通用样式（满足登录/注册按钮要求） */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 20px; /* 圆角 */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease; /* hover过渡 */
+}
+
+.btn:hover {
+  transform: translateY(-2px); /* 悬停上移效果 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+  background-color: #4299e1;
+  color: white;
+}
+
+.btn-reset {
+  background-color: #e53e3e;
+  color: white;
+}
+
+/* 响应式 - 移动端适配（768px以下） */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 内容区响应式 */
+  .content-wrap {
+    flex-direction: column !important;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .content-area {
+    width: 100% !important;
+  }
+}
+
+/* 主题介绍页动画（满足animation要求） */
+@keyframes scenicFadeIn {
+  0% { opacity: 0; transform: translateX(20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.scenic-item {
+  animation: scenicFadeIn 0.8s ease forwards;
+  margin-bottom: 2rem;
+  opacity: 0; /* 初始隐藏 */
+}
+
+/* 特色内容页 - 侧边栏块形链接 */
+.sidebar-link {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #f0f8fb;
+  border-left: 4px solid #4299e1;
+  margin-bottom: 0.8rem;
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #4299e1;
+  color: white;
+  border-left-color: #2b6cb0;
+}
+
+/* 表单样式（登录/注册页） */
+.form-box {
+  max-width: 500px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* 音视频控制容器（自定义控制面板） */
+.media-control {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.media-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #4299e1;
+  color: white;
+  cursor: pointer;
+}
+
+.volume-slider, .progress-slider {
+  width: 150px;
+}

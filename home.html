@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>湖南景区介绍 - 主页</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./fonts/font.css"> <!-- 引入自定义字体 -->
+</head>
+<body>
+  <!-- 顶部导航（含日期、logo、超链接） -->
+  <header class="header">
+    <div class="date" id="currentDate"></div>
+    <div class="logo">
+      <img src="./images/logo.png" alt="湖南景区介绍网logo">
+    </div>
+    <nav class="nav">
+      <a href="register.html">注册</a>
+      <a href="feature.html">景区特色内容</a>
+      <a href="theme.html">景区主题介绍</a>
+      <a href="home.html">首页</a>
+    </nav>
+  </header>
+
+  <!-- 主体内容区 -->
+  <div class="container" style="margin-top: 2rem;">
+    <h2 style="text-align: center; color: #2d3748; margin-bottom: 2rem;">湖南经典景区概览</h2>
+
+    <!-- 响应式景区卡片布局 -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      <!-- 张家界卡片 -->
+      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <img src="./images/tianmenshan.jpg" alt="张家界天门山" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+        <h3 style="color: #4299e1; margin-bottom: 0.8rem;">张家界武陵源</h3>
+        <p style="line-height: 1.6; color: #4a5568;">
+          张家界武陵源风景名胜区以石英砂岩峰林地貌为核心，拥有3000多座奇峰异石，被联合国教科文组织列入《世界自然遗产名录》。
+          标志性景点有天门山、袁家界、百龙天梯等，是湖南最具代表性的自然景区。
+        </p>
+      </div>
+
+      <!-- 凤凰古城卡片 -->
+      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <img src="./images/fenghuang.jpg" alt="凤凰古城" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+        <h3 style="color: #4299e1; margin-bottom: 0.8rem;">凤凰古城</h3>
+        <p style="line-height: 1.6; color: #4a5568;">
+          凤凰古城位于湘西土家族苗族自治州，是国家历史文化名城。沱江穿城而过，吊脚楼依山而建，
+          融合了苗族、土家族的民俗文化，夜晚的古城灯火璀璨，被誉为“中国最美小城”。
+        </p>
+      </div>
+
+      <!-- 衡山卡片 -->
+      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <img src="./images/5.jpg" alt="南岳衡山" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+        <h3 style="color: #4299e1; margin-bottom: 0.8rem;">南岳衡山</h3>
+        <p style="line-height: 1.6; color: #4a5568;">
+          衡山是中国“五岳”中的南岳，以“秀”著称，素有“五岳独秀”的美誉。景区内有南岳大庙、祝融峰、水帘洞等景点，
+          既是宗教圣地，也是避暑休闲的天然氧吧，四季景色各有千秋。
+        </p>
+      </div>
+
+      <!-- 橘子洲卡片 -->
+      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <img src="./images/jzz.jpg" alt="橘子洲" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+        <h3 style="color: #4299e1; margin-bottom: 0.8rem;">橘子洲</h3>
+        <p style="line-height: 1.6; color: #4a5568;">
+          橘子洲是湘江江心的狭长沙洲，被誉为 “中国第一洲”。核心地标是青年毛泽东艺术雕塑，宏伟壮观。
+          洲上林木繁茂，风光旖旎，融合红色文化与生态景观，是长沙标志性的文旅胜地，承载着深厚的历史与人文底蕴。
+        </p>
+      </div>
+
+      <!-- 岳阳楼卡片 -->
+      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <img src="./images/3.jpg" alt="岳阳楼" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+        <h3 style="color: #4299e1; margin-bottom: 0.8rem;">岳阳楼</h3>
+        <p style="line-height: 1.6; color: #4a5568;">
+          岳阳楼坐落于湖南岳阳古城西门城墙之上，下瞰洞庭、前望君山，是江南三大名楼之一，也是国家5A级景区与全国重点文保单位。
+          其前身为三国鲁肃阅军楼，北宋时因滕子京重修、范仲淹作《岳阳楼记》声名远播，现存为清光绪六年形制，三层纯木盔顶结构，无钉无铆，尽显古建精巧，承载“先忧后乐”的人文精神。
+        </p>
+      </div>
+
+      <!-- 桃花源片 -->
+      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <img src="./images/4.jpg" alt="桃花源" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+        <h3 style="color: #4299e1; margin-bottom: 0.8rem;">桃花源</h3>
+        <p style="line-height: 1.6; color: #4a5568;">
+          桃花源是陶渊明《桃花源记》原型地，国家 5A 级景区，也是道教 “第三十五洞天、第四十六福地”常德市人民政府。
+          这里临沅江、靠武陵群峰，有桃花山、桃源山等核心景区，春日桃花漫野，亭台楼阁与田园风光相融，尽显 “世外桃源” 意境，人文与自然兼具常德市人民政府
+        </p>
+      </div>
+
+      <!-- 崀山卡片 -->
+      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <img src="./images/6.jpg" alt="崀山" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+        <h3 style="color: #4299e1; margin-bottom: 0.8rem;">崀山</h3>
+        <p style="line-height: 1.6; color: #4a5568;">
+          崀山在湖南邵阳新宁县，是世界自然遗产、国家 5A 级景区，被誉为 “丹霞之魂、国之瑰宝”崀山景区。
+          总面积 108 平方公里，含天一巷、八角寨等六大景区，“天下第一巷”“鲸鱼闹海” 等景观堪称一绝，夫夷江蜿蜒其间，赤壁丹崖与田园风光相融，尽显丹霞地貌雄奇秀美中华人民共和国文化和旅游部
+        </p>
+      </div>
+
+      <!-- 东江湖卡片 -->
+      <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <img src="./images/dongjianghu.jpg" alt="东江湖" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem;">
+        <h3 style="color: #4299e1; margin-bottom: 0.8rem;">东江湖</h3>
+        <p style="line-height: 1.6; color: #4a5568;">
+          东江湖在湖南郴州资兴市，是国家 5A 级景区，有 “湘南洞庭” 之称，由东江大坝截耒水而成，蓄水量 81.2 亿立方米，水质达国家一级标准。
+          核心景观 “雾漫小东江”（5-10 月晨雾）、兜率灵岩溶洞、龙景峡谷等，兼具高峡平湖的壮阔与仙境般的柔美，是集山水、坝岛、洞漂于一体的生态旅游胜地。
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top: 4rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <h3 style="color: #2d3748; margin-bottom: 1.5rem;">湖南核心景区年游客量统计（2023~2025）</h3>
+      <div id="visitorChart" style="width: 100%; height: 400px;"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+  <script>
+    // 显示当前日期
+    const date = new Date();
+    const formattedDate = `${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日 ${date.getHours()}:${date.getMinutes()}`;
+    document.getElementById('currentDate').innerText = formattedDate;
+
+    // ECharts 游客量柱状图
+const chartDom = document.getElementById('visitorChart');
+const myChart = echarts.init(chartDom);
+const option = {
+  title: {
+    text: '湖南核心景区年游客量统计',
+    subtext: '单位：万人次 | 颜色说明：张家界(蓝色)、凤凰古城(橙色)、衡山(绿色)、东江湖(紫色)、崀山(红色)'
+  },
+  xAxis: {
+    type: 'category',
+    data: ['2023', '2024', '2025']
+  },
+  yAxis: {
+    type: 'value',
+    name: '游客量（万人次）'
+  },
+  color: ['#1E90FF', '#FF8C00', '#32CD32', '#9370DB', '#DC143C'],
+  series: [
+    { name: '张家界', type: 'bar', data: [9200, 9800, 10500], itemStyle: { color: '#1E90FF' } }, // 蓝色
+    { name: '凤凰古城', type: 'bar', data: [5100, 5600, 6200], itemStyle: { color: '#FF8C00' } }, // 橙色
+    { name: '衡山', type: 'bar', data: [3800, 4100, 4500], itemStyle: { color: '#32CD32' } }, // 绿色
+    { name: '东江湖', type: 'bar', data: [2800, 3100, 3500], itemStyle: { color: '#9370DB' } }, // 紫色
+    { name: '崀山', type: 'bar', data: [1800, 2100, 2400], itemStyle: { color: '#DC143C' } }  // 红色
+  ],
+  legend: {
+    orient: 'horizontal',
+    bottom: 0
+  }
+};
+myChart.setOption(option);
+window.addEventListener('resize', () => myChart.resize());
+  </script>
+</body>
+</html>

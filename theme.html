@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>湖南景区介绍 - 主题介绍</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./fonts/font.css">
+</head>
+<body>
+  <header class="header">
+    <div class="date" id="themeDate"></div>
+    <div class="logo">
+      <img src="./images/logo.png" alt="湖南景区介绍网logo">
+    </div>
+    <nav class="nav">
+      <a href="register.html">注册</a>
+      <a href="feature.html">景区特色内容</a>
+      <a href="theme.html">景区主题介绍</a>
+      <a href="home.html">首页</a>
+    </nav>
+  </header>
+
+  <div class="container" style="margin-top: 2rem;">
+    <div class="content-wrap" style="display: flex; gap: 2rem;">
+      <div class="sidebar" style="width: 25%;">
+        <h3 style="color: #2d3748; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #4299e1;">主题分类</h3>
+        <a href="javascript:showTheme('nature')" style="display: block; margin-bottom: 1rem;">
+          <img src="./images/zhangjiajie.jpg" alt="自然山水" style="width: 100%; height: 80px; object-fit: cover; border-radius: 4px;">
+          <p style="text-align: center; margin-top: 0.5rem; color: #2d3748; text-decoration: none;">自然山水类景区</p>
+        </a>
+        <a href="javascript:showTheme('culture')" style="display: block; margin-bottom: 1rem;">
+          <img src="./images/fenghuang.jpg" alt="人文古城类景区" style="width: 100%; height: 80px; object-fit: cover; border-radius: 4px;">
+          <p style="text-align: center; margin-top: 0.5rem; color: #2d3748; text-decoration: none;">人文古城类景区</p>
+        </a>
+        <a href="javascript:showTheme('religion')" style="display: block;">
+          <img src="./images/hengshan.jpg" alt="宗教文化类景区" style="width: 100%; height: 80px; object-fit: cover; border-radius: 4px;">
+          <p style="text-align: center; margin-top: 0.5rem; color: #2d3748; text-decoration: none;">宗教文化类景区</p>
+        </a>
+      </div>
+
+      <div class="content-area" style="width: 75%;" id="themeContent">
+
+        <div id="natureContent" class="scenic-item" style="animation-delay: 0.2s;">
+          <h2 style="color: #4299e1; margin-bottom: 1.5rem;">自然山水类景区 - 湖南的“山水名片”</h2>
+          <img src="./images/zhangjiajie.jpg" alt="张家界自然山水" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem;">
+          <p style="line-height: 1.8; color: #4a5568; margin-bottom: 1rem;">
+            湖南地处长江中游，地形以山地、丘陵为主，造就了丰富的自然山水景观。除了张家界，还有东江湖、崀山、壶瓶山等知名自然景区。
+          </p>
+          <p style="line-height: 1.8; color: #4a5568; margin-bottom: 1rem;">
+            这些景区以原始的生态环境、奇特的地质地貌为核心特色，是户外探险、休闲度假、科普教育的理想之地，其中崀山同样入选世界自然遗产名录。
+          </p>
+          <p style="line-height: 1.8; color: #4a5568;">
+            湖南的自然山水不仅是视觉盛宴，更承载了“绿水青山就是金山银山”的发展理念，景区开发始终以生态保护为前提。
+          </p>
+        </div>
+
+
+        <div id="cultureContent" class="scenic-item" style="display: none; animation-delay: 0.4s;">
+          <h2 style="color: #4299e1; margin-bottom: 1.5rem;">人文古城类景区 - 湘西的“文化密码”</h2>
+          <img src="./images/fenghuang.jpg" alt="凤凰古城人文" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem;">
+          <p style="line-height: 1.8; color: #4a5568; margin-bottom: 1rem;">
+            湖南的古城古镇多集中在湘西地区，除凤凰古城外，还有芙蓉镇、里耶古城、黔阳古城等。这些古城见证了湘西的历史变迁，
+            融合了汉、苗、土家、侗等多个民族的文化元素。
+          </p>
+          <p style="line-height: 1.8; color: #4a5568; margin-bottom: 1rem;">
+            芙蓉镇因瀑布穿城而过被称为“挂在瀑布上的千年古镇”，里耶古城出土的秦简填补了秦代历史研究的空白，黔阳古城则是“诗家天子”王昌龄的贬谪之地。
+          </p>
+          <p style="line-height: 1.8; color: #4a5568;">
+            如今，这些古城在保护的基础上发展文旅产业，让传统民俗、手工艺、美食得以传承和展示。
+          </p>
+        </div>
+
+
+        <div id="religionContent" class="scenic-item" style="display: none; animation-delay: 0.6s;">
+          <h2 style="color: #4299e1; margin-bottom: 1.5rem;">宗教文化类景区 - 南岳的“千年香火”</h2>
+          <img src="./images/hengshan.jpg" alt="衡山宗教文化" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem;">
+          <p style="line-height: 1.8; color: #4a5568; margin-bottom: 1rem;">
+            衡山是中国道教和佛教的重要圣地，宗教文化底蕴深厚。南岳大庙是江南最大的古建筑群，集儒、释、道三教于一体，
+            祝融峰作为衡山最高峰，历来是祭祀火神祝融的圣地。
+          </p>
+          <p style="line-height: 1.8; color: #4a5568; margin-bottom: 1rem;">
+            除衡山外，湖南还有岳麓山的岳麓寺、开福寺、夹山寺等知名宗教场所，这些场所不仅是宗教活动的载体，也是历史文化的重要遗存。
+          </p>
+          <p style="line-height: 1.8; color: #4a5568;">
+            衡山的宗教文化与自然景观结合，形成了“佛道共存、山水相融”的独特风貌，每年吸引数百万香客和游客前来祈福、观光。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    const date = new Date();
+    const formattedDate = `${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日 ${date.getHours()}:${date.getMinutes()}`;
+    document.getElementById('themeDate').innerText = formattedDate;
+
+
+    function showTheme(type) {
+      document.getElementById('natureContent').style.display = 'none';
+      document.getElementById('cultureContent').style.display = 'none';
+      document.getElementById('religionContent').style.display = 'none';
+      const targetContent = document.getElementById(`${type}Content`);
+      targetContent.style.display = 'block';
+      targetContent.style.animation = 'none';
+      setTimeout(() => {
+        targetContent.style.animation = '';
+      }, 10);
+    }
+  </script>
+</body>
+</html>
